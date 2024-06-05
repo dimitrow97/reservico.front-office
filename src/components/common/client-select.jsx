@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/select"
 import { useDispatch, useSelector } from "react-redux"
 import { apiSlice } from "../../app/api/api-slice"
-import { setUserSelectedClient } from "../../features/auth/auth-slice"
+import { setUserSelectedClient, selectCurrentClient } from "../../features/auth/auth-slice"
 import { useGetClientsForUserQuery, useUpdateUserSelectedClientMutation } from "../../features/users/users-api-slice"
 import Loader from "./loader"
 import Error from "./error"
