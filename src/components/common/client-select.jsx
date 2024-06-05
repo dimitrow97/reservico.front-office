@@ -38,7 +38,7 @@ export function ClientSelect() {
       const response = await updateSelectedClient(request).unwrap()
 
       if (response.isSuccess) {
-        dispatch(apiSlice.util.invalidateTags(["client-users"]))
+        dispatch(apiSlice.util.invalidateTags(["client-users", "dashboard", "locations"]))
         dispatch(setUserSelectedClient(request))
         setSelectedOption(value)
       }

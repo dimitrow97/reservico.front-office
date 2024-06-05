@@ -20,7 +20,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
                 method: 'PUT',
                 body: { ...requestModel }
             }),
-            invalidatesTags: ["client-users", "dashboard"] 
+            invalidatesTags: ["client-users", "dashboard", "locations"] 
         }),                
     })
 })
