@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button"
 import {
-    Trash2
+    Check
 } from "lucide-react"
 import { useConfirmReservationMutation } from "../../features/reservations/reservations-api-slice"
 import { useToast } from "@/components/ui/use-toast"
@@ -72,7 +72,7 @@ export function ReservationConfirmAlertDialog(props) {
                 <AlertDialogFooter>
                     <AlertDialogCancel>Cancel</AlertDialogCancel>
                     <AlertDialogAction onClick={handleOnClick} className="bg-green-500 hover:bg-green-700">
-                        <Trash2 className="mr-2 h-4 w-4" />Continue
+                        <Check className="mr-2 h-4 w-4" />Continue
                     </AlertDialogAction>
                 </AlertDialogFooter>
             </AlertDialogContent>

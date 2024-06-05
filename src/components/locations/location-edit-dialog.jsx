@@ -29,6 +29,7 @@ import { apiSlice } from "../../app/api/api-slice"
 import { useDispatch } from "react-redux"
 import CategoriesMultiSelect from "../categories/categories-multi-select"
 import Loader from "../common/loader"
+import Error from "../common/error"
 
 export function LocationEditDialog({ props }) {
     const [updateLocation] = useUpdateLocationMutation()
@@ -219,7 +220,7 @@ export function LocationEditDialog({ props }) {
             </Dialog>
         )
     } else if (isError) {
-        content = <p>{JSON.stringify(error)}</p>;
+        content = <Error />;
     }
 
     return content

@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import Loader from "../../common/loader"
 import LocationTableDeleteAlertDialog from "./location-table-delete-alert-dialog"
+import Error from "@/components/common/error"
 
 const LocationTableDetailsForm = (props) => {
     const {
@@ -130,7 +131,7 @@ const LocationTableDetailsForm = (props) => {
             </div>
         )
     } else if (isError) {
-        content = <p>{JSON.stringify(error)}</p>;
+        content = <Error />;
     }
 
     return content

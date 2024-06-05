@@ -4,6 +4,7 @@ import { useGetLocationImagesQuery } from "../../../features/locations/images/im
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import Loader from "../../common/loader"
 import LocationImageDeleteAlertDialog from "./location-image-delete-alert-dialog"
+import Error from "@/components/common/error"
 
 const LocationImagesScroll = ({ locationId }) => {
     const srcPrefix = "https://resstgaccmpxdkxmudev.blob.core.windows.net/"
@@ -42,7 +43,7 @@ const LocationImagesScroll = ({ locationId }) => {
             </ScrollArea>
         )
     } else if (isError) {
-        content = <p>{JSON.stringify(error)}</p>;
+        content = <Error />;
     }
 
     return content

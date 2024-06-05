@@ -3,6 +3,7 @@ import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import Loader from "../common/loader";
 import ReservationConfirmAlertDialog from "./reservation-confirm-alert-dialog"
+import Error from "../common/error";
 
 const ReservationDetailsForm = (props) => {
     const {
@@ -147,7 +148,7 @@ const ReservationDetailsForm = (props) => {
             </div>
         )
     } else if (isError) {
-        content = <p>{JSON.stringify(error)}</p>;
+        content = <Error />;
     }
 
     return content

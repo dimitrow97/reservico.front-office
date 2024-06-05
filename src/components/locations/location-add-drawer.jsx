@@ -35,6 +35,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { selectCurrentClient } from "../../features/auth/auth-slice"
 import { useGetCategoriesQuery } from "../../features/categories/categories-api-slice"
 import Loader from "../common/loader"
+import Error from "../common/error"
 
 export function LocationAddDrawer() {
     const [loading, setLoading] = useState(false)
@@ -273,7 +274,7 @@ export function LocationAddDrawer() {
             </Drawer>
         )
     } else if (isError) {
-        content = <p>{JSON.stringify(error)}</p>;
+        content = <Error />;
     }
 
     return content

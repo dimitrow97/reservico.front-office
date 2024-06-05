@@ -5,6 +5,7 @@ import Loader from "../common/loader";
 import { Badge } from "@/components/ui/badge"
 import LocationDeleteAlertDialog from './location-delete-alert-dialog'
 import LocationEditDialog from "./location-edit-dialog"
+import Error from "../common/error";
 
 const LocationDetailsForm = (props) => {
     const {
@@ -131,7 +132,7 @@ const LocationDetailsForm = (props) => {
             </div>
         )
     } else if (isError) {
-        content = <p>{JSON.stringify(error)}</p>;
+        content = <Error />;
     }
 
     return content

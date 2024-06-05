@@ -8,6 +8,7 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
+import Error from "@/components/common/error"
 
 const Locations = () => {
     const {
@@ -33,7 +34,7 @@ const Locations = () => {
             </Card>
         )
     } else if (isError) {
-        content = <p>{JSON.stringify(error)}</p>;
+        content = <Error />;
     }
 
     return content

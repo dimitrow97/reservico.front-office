@@ -1,6 +1,7 @@
 import LocationTablesDataTable from "./location-tables-data-table";
 import { useGetTablesQuery } from "../../../features/locations/tables/tables-api-slice"
 import Loader from "../../common/loader"
+import Error from "@/components/common/error";
 
 const LocationTables = (props) => {
     const {
@@ -20,7 +21,7 @@ const LocationTables = (props) => {
             <LocationTablesDataTable data={tables.data} locationId={props.id} />
         )
     } else if (isError) {
-        content = <p>{JSON.stringify(error)}</p>;
+        content = <Error />;
     }
 
     return content
